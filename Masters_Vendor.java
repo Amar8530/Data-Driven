@@ -124,15 +124,7 @@ WebDriver driver;
 		driver.findElement(By.id("btnSave")).click(); //SAVE
 		Thread.sleep(1000);
 		
-		WebElement Dupli = driver.findElement(By.id("MSGBoxCtrl_lblMsgTitle"));
-		if(Dupli.isDisplayed());
 		
-		{
-			System.out.println(Dupli.getText());
-			Assert.assertTrue(true);
-		}
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@id='MSGBoxCtrl_btnOk']")).click();
 		driver.findElement(By.id("btnBack")).click();
 		Thread.sleep(1000);
 		
@@ -183,13 +175,7 @@ public void ErrorMessage() throws InterruptedException
 	driver.findElement(By.id("btnSave")).click();
 	Thread.sleep(1000);
 	
-	  WebElement errorMsg=driver.findElement(By.xpath("//div[@id='Validationsummary2']"));
-	  if(errorMsg.isDisplayed()); 
-	  { 
-	   System.out.println(errorMsg.getText()); 
-	   Assert.assertTrue(true);
-	  }
-	  Thread.sleep(1000);
+	 
 	  driver.findElement(By.id("btnBack")).click();//CLOSE.
 	  driver.quit();
 }
